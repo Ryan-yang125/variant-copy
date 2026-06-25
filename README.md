@@ -64,6 +64,8 @@ The content script is injected only on:
 https://variant.com/community*
 ```
 
+Privacy details are documented in [PRIVACY.md](PRIVACY.md).
+
 ## How It Works
 
 Variant community cards include a `data-design-id` attribute. For each card, Variant Copy builds this URL:
