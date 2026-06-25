@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Variant Copy</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="panel">
+      <header class="hero">
+        <img src="assets/icon-48.png" width="48" height="48" alt="">
+        <h1>Variant Copy</h1>
+      </header>
+
+      <section class="status-card" aria-live="polite">
+        <div class="status-row">
+          <span class="status-pill" id="status-pill">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span id="status-label">Checking</span>
+          </span>
+          <a class="settings-link" href="https://variant.com/community" target="_blank" rel="noreferrer" title="Open Variant community" aria-label="Open Variant community">
+            <svg width="21" height="21" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M8.25 3.25H5.25C4.14543 3.25 3.25 4.14543 3.25 5.25V14.75C3.25 15.8546 4.14543 16.75 5.25 16.75H14.75C15.8546 16.75 16.75 15.8546 16.75 14.75V11.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              <path d="M10.75 3.25H16.75V9.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M9.25 10.75L16.25 3.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </a>
+        </div>
+
+        <p id="status-detail">Reading the active tab.</p>
+        <p class="version" id="version">Version</p>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

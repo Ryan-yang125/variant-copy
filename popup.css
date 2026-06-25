@@ -1,0 +1,130 @@
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --border: #e8e8e8;
+  --card: #fbfbfb;
+  --ink: #292929;
+  --muted: #646464;
+  --ready-bg: #dff8e9;
+  --ready-ink: #008c42;
+  --idle-bg: #f2f2f2;
+  --idle-ink: #555555;
+  --warn-bg: #fff2d8;
+  --warn-ink: #9a5a00;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-width: 360px;
+  width: 360px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.4 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.panel {
+  padding: 28px 24px 24px;
+}
+
+.hero {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.hero img {
+  display: block;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: 650;
+  letter-spacing: 0;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.status-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  padding: 18px 18px 16px;
+}
+
+.status-row {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.status-pill {
+  align-items: center;
+  background: var(--idle-bg);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 999px;
+  color: var(--idle-ink);
+  display: inline-flex;
+  font-size: 15px;
+  font-weight: 650;
+  gap: 8px;
+  min-height: 36px;
+  padding: 7px 14px;
+}
+
+.status-pill[data-state="ready"] {
+  background: var(--ready-bg);
+  color: var(--ready-ink);
+}
+
+.status-pill[data-state="warn"] {
+  background: var(--warn-bg);
+  color: var(--warn-ink);
+}
+
+.status-dot {
+  background: currentColor;
+  border-radius: 999px;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+}
+
+.settings-link {
+  align-items: center;
+  border-radius: 8px;
+  color: #666666;
+  display: inline-flex;
+  height: 32px;
+  justify-content: center;
+  text-decoration: none;
+  width: 32px;
+}
+
+.settings-link:hover {
+  background: #eeeeee;
+  color: #222222;
+}
+
+#status-detail {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 18px 0 0;
+}
+
+.version {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 12px 0 0;
+}
