@@ -4,6 +4,10 @@ Variant Copy is a small Chrome/Edge extension for copying HTML source from cards
 
 When you hover a community card, Variant shows bookmark and like actions. Variant Copy adds one more copy button to the left of the bookmark button. Clicking it reads the card's `data-design-id`, fetches `https://variant.com/design/<id>.html`, and copies the returned HTML source to your clipboard.
 
+## Demo
+
+<img src="assets/product-demo.png" alt="Variant Copy adds a Copy HTML button to Variant community cards" width="900">
+
 ## Features
 
 - Adds a copy button directly inside Variant community cards.
