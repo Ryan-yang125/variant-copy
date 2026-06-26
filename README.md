@@ -6,7 +6,7 @@ Hover a community card, click the copy button next to Variant's bookmark and lik
 
 ## Demo
 
-<video src="assets/varientcopy.mp4" controls width="900"></video>
+<video src="https://github.com/user-attachments/assets/2831b2cb-acd6-41df-a569-d9edf80f6bbc" controls width="900"></video>
 
 ## Features
 
