@@ -1,20 +1,21 @@
 # Variant Copy
 
-Variant Copy is a small Chrome/Edge extension for copying HTML source from cards on [variant.com/community](https://variant.com/community).
+Variant Copy is a small Chrome/Edge extension that adds a one-click copy action to [Variant Community](https://variant.com/community) cards.
 
-When you hover a community card, Variant shows bookmark and like actions. Variant Copy adds one more copy button to the left of the bookmark button. Clicking it reads the card's `data-design-id`, fetches `https://variant.com/design/<id>.html`, and copies the returned HTML source to your clipboard.
+Hover a community card, click the copy button next to Variant's bookmark and like controls, and the card's HTML source is copied to your clipboard.
 
 ## Demo
 
-<img src="assets/product-demo.png" alt="Variant Copy adds a Copy HTML button to Variant community cards" width="900">
+<video src="assets/varientcopy.mp4" controls width="900"></video>
 
 ## Features
 
 - Adds a copy button directly inside Variant community cards.
-- Copies the design HTML source with one click.
-- Works with newly loaded cards during infinite scroll.
+- Copies the selected card's HTML source with one click.
+- Shows a success state after the copy finishes.
+- Keeps working as new cards load during infinite scroll.
+- Includes a small toolbar popup showing whether the current tab is ready.
 - Runs only on `https://variant.com/community*`.
-- Includes a simple toolbar popup showing whether the current tab is ready.
 
 ## Install From GitHub Release
 
@@ -38,57 +39,13 @@ npm run check
 
 Then load the repository folder from `chrome://extensions` with Developer mode enabled.
 
-## Package A Release Zip
+## Privacy
 
-```bash
-npm run package
-```
+Variant Copy does not collect, store, sell, or share personal information.
 
-The installable zip is written to:
-
-```text
-dist/variant-copy-v0.1.0.zip
-```
-
-## Permissions
-
-Variant Copy keeps permissions narrow:
-
-- `activeTab`: lets the popup read the active tab when you click the extension icon.
-- `clipboardWrite`: lets the copy button write HTML source to your clipboard.
-- `https://variant.com/design/*.html`: lets the content script fetch the design HTML source.
-
-The content script is injected only on:
-
-```text
-https://variant.com/community*
-```
+It does not use analytics, tracking pixels, advertising identifiers, remote logging, or a developer-operated backend.
 
 Privacy details are documented in [PRIVACY.md](PRIVACY.md).
-
-## How It Works
-
-Variant community cards include a `data-design-id` attribute. For each card, Variant Copy builds this URL:
-
-```text
-https://variant.com/design/<data-design-id>.html
-```
-
-It fetches that HTML and writes the response text to the clipboard.
-
-## Development
-
-```bash
-npm run check
-```
-
-This validates the JavaScript syntax and parses `manifest.json`.
-
-```bash
-npm run icons
-```
-
-This regenerates the extension PNG icons from the local Pillow drawing script.
 
 ## License
 
